@@ -44,6 +44,8 @@ def getRoutes(request):
 
     return Response(routes)
 
+# Get all Users
+
 
 @api_view(['GET'])
 def getUsers(request):
@@ -51,9 +53,32 @@ def getUsers(request):
     serializer = UserSerializer(user, many=True)
     return Response(serializer.data)
 
+# Get single User
+
 
 @api_view(['GET'])
 def getUser(request, pk):
     user = User.objects.get(id=pk)
     serializer = UserSerializer(user, many=False)
     return Response(serializer.data)
+
+# Create new User
+
+
+@api_view(['POST'])
+def createUser(request):
+    serializer = UserSerializer(request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+
+
+@api_view(['POST'])
+def updateUser(request, pk):
+    user = User.objects.get(id=pk)
+    serializer = UserSerializer(instance=user, data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
