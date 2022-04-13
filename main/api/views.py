@@ -85,3 +85,6 @@ def updateUser(request, pk):
 
 
 111
+
+
+@api_view
