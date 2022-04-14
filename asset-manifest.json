@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/djangoreactapp/static/css/main.abd64e84.css",
+    "main.js": "/djangoreactapp/static/js/main.23665943.js",
+    "index.html": "/djangoreactapp/index.html",
+    "main.abd64e84.css.map": "/djangoreactapp/static/css/main.abd64e84.css.map",
+    "main.23665943.js.map": "/djangoreactapp/static/js/main.23665943.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.23665943.js"
+  ]
+}
